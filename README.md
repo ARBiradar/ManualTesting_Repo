@@ -1,75 +1,152 @@
-Guru99 Login Application – Manual & Security Testing Report
-This repository contains a comprehensive manual and security testing report for the Guru99 Login Application. The objective is to validate core login functionality and assess the application’s security posture through structured test scenarios and documented findings.
+# 🔐 Guru99 Login Application – Manual & Security Testing Report
 
-📋 Project Overview
-Application Under Test: Guru99 Login Page
+This repository contains a **comprehensive Manual and Security Testing report** for the **Guru99 Login Application**.  
+The goal of this project is to validate the **functional behavior**, **usability**, and **security posture** of the login module through structured test scenarios and documented findings.
 
-Testing Types: Functional, UI, and Security Testing
+This project reflects **real-world QA and security testing practices** and is suitable for portfolios, interviews, and academic submissions.
 
-Environment: Chrome, Firefox, Edge
+---
 
-Tools Used:
+## 📋 Project Overview
 
-Excel/Google Sheets (Test Case Tracking)
+- **Application Under Test (AUT):** Guru99 Login Page  
+- **Module Tested:** Login / Authentication  
+- **Testing Approach:** Black-box testing  
+- **Testing Type:** Manual Testing  
 
-Burp Suite / Browser DevTools
+### 🎯 Objectives
+- Verify correct login functionality with valid and invalid inputs  
+- Validate UI behavior and error message handling  
+- Identify security vulnerabilities in authentication flow  
+- Analyze session handling and browser navigation behavior  
 
-Screenshot Tool
+---
 
-✅ Scope of Testing
-In Scope:
+## 🧪 Types of Testing Performed
 
-Login functionality
+### ✅ Functional Testing
+- Valid and invalid login scenarios  
+- Mandatory field validation  
+- Boundary value testing  
+- Error message verification  
 
-Error message handling
+### 🎨 UI / Usability Testing
+- UI alignment and consistency  
+- Placeholder and label validation  
+- Password masking  
+- Cross-browser compatibility  
 
-Session management
+### 🔐 Security Testing
+- SQL Injection testing  
+- Cross-Site Scripting (XSS)  
+- Broken authentication checks  
+- Session management validation  
+- Browser back/refresh behavior after logout  
 
-Password masking
+---
 
-Security checks (XSS, SQL Injection, Broken Authentication)
+## 🌐 Test Environment
 
-Browser navigation behavior
+| Parameter | Details |
+|--------|--------|
+| Browsers | Chrome, Firefox, Microsoft Edge |
+| OS | Windows |
+| Testing Level | System Testing |
+| Test Data | Valid, Invalid, Malicious Inputs |
 
-Out of Scope:
+---
 
-Backend database verification
+## 🛠 Tools Used
 
-API-level security
+- Excel / Google Sheets – Test case design & tracking  
+- Burp Suite – Security testing  
+- Browser Developer Tools – Network & console analysis  
+- Screenshot Tool – Defect evidence  
 
-Load and stress testing
+---
 
-🧪 Test Artifacts
-Test Scenarios: 20 (Functional + Security)
+## ✅ Scope of Testing
 
-Test Cases: 40 total
+### ✔ In Scope
+- Login functionality  
+- Input validations  
+- Error handling  
+- Password masking  
+- Session creation & termination  
+- Basic security vulnerabilities  
+- Browser navigation behavior  
 
-Bug Reports: 7 open issues (Critical, Major, Medium, Minor)
+### ❌ Out of Scope
+- Backend database validation  
+- API security testing  
+- Performance / load testing  
+- Role-based authorization  
 
-Test Summary:
+---
 
-Duration: 2 days
+## 🧪 Test Artifacts
 
-Passed: 28
+- **Test Scenarios:** 20  
+  - Functional: 12  
+  - Security: 8  
 
-Failed: 12
+- **Test Cases:** 40  
 
-Blocked: 0
+### 📊 Test Execution Summary
 
-🐞 Key Findings
-SQL Injection vulnerability in login fields
+| Status | Count |
+|------|------|
+| Passed | 28 |
+| Failed | 12 |
+| Blocked | 0 |
 
-XSS input not sanitized
+- **Execution Duration:** 2 Days  
 
-Session does not expire on inactivity
+---
 
-Browser back button allows unauthorized access post-logout
+## 🐞 Defect Summary
 
-Password autocomplete enabled
+| Severity | Count |
+|--------|-------|
+| Critical | 2 |
+| Major | 3 |
+| Medium | 1 |
+| Minor | 1 |
 
-Error messages expose internal details
+---
 
-Application served over HTTP (no HTTPS)
+## 🚨 Key Findings
 
-📌 Conclusion
-The application is not secure for production until all critical and major vulnerabilities are resolved. This report provides actionable insights to improve the security and reliability of the login system.
+- SQL Injection vulnerability in login fields  
+- XSS inputs not properly sanitized  
+- Session does not expire after inactivity  
+- Browser back button allows access after logout  
+- Password autocomplete enabled  
+- Error messages expose internal details  
+- Application served over HTTP (no HTTPS)  
+
+---
+
+## 📌 Recommendations
+
+- Implement proper input validation and sanitization  
+- Use prepared statements to prevent SQL Injection  
+- Enforce HTTPS with SSL/TLS  
+- Improve session timeout and invalidation  
+- Disable password autocomplete  
+- Display generic error messages  
+- Perform regular security testing (VAPT)  
+
+---
+
+## 📌 Conclusion
+
+The Guru99 Login Application is **not secure for production use** in its current state.  
+Multiple **critical and major vulnerabilities** were identified that pose serious security risks.
+
+Fixing the reported issues will significantly improve the **security, reliability, and user trust** of the application.
+
+---
+
+## 📂 Repository Structure
+
